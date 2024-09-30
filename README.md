@@ -35,42 +35,53 @@ Here, you’ll find the essential steps to set up and navigate through the proje
    cp .env.example .env
    ```
 
-4. Generate the Application Key
+4. Set Database Connection
+   Open the .env file in a text editor and set your database connection details:
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=laravel11-kopi-king
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+
+5. Generate the Application Key
    ```console
    php artisan key:generate
    ```
 
-5. Create Storage Link
+6. Create Storage Link
    ```console
    php artisan storage:link
    ```
 
-6. Update the Filesystem Disk
+7. Update the Filesystem Disk
    Open your `.env` file and change the `FILESYSTEM_DISK` value from `local` to `public`:
    ```
    FILESYSTEM_DISK=public
    ```
 
-7. Run Migrations
+8. Run Migrations
    ```console
    php artisan migrate
    ```
 
-8. Seed the Database
+9. Seed the Database
    ```console
    php artisan db:seed --class=DatabaseSeeder
    php artisan db:seed --class=FrontPagesSeeder
    ```
 
-9. Compile Assets
-   ```console
-   npm run dev
-   ```
+10. Compile Assets
+    ```console
+    npm run dev
+    ```
 
-10. Run the Application
-   ```console
-   php artisan serve
-   ```
+11. Run the Application
+    ```console
+    php artisan serve
+    ```
 
 ## First Usage
 
@@ -81,7 +92,7 @@ Email: admin@example.com
 Password: password
 ```
 
-Once logged in, you can start adding the necessary media files and photos for the website.
+Once logged in, you can start exploring the interface and adding the necessary media files and photos for the website.
 
 ## Screenshots
 
@@ -91,7 +102,6 @@ Once logged in, you can start adding the necessary media files and photos for th
 
 ## Tech
 
-Teknologi dalam aplikasi ini:
 - [Laravel 11](https://laravel.com/docs/11.x/documentation) - a PHP web application framework with expressive, elegant syntax.
 - [Breeze Starter Kit](https://laravel.com/docs/11.x/starter-kits#laravel-breeze) - a minimal, simple implementation of all of Laravel's authentication features.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework packed with classes.
